@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Click_Game.Panel_uri;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,9 @@ namespace Click_Game
         public Form1()
         {
             InitializeComponent();
+
+            this.Controls.Add(new pnlStart(this));
+
         }
     }
 }
