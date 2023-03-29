@@ -38,6 +38,7 @@ namespace Click_Game.Panel_uri
             this.btnStart.Font = font;
             this.btnStart.Text = "Start";
             this.btnStart.Click += new EventHandler(btnStart_Click);
+            this.btnStart.Anchor = AnchorStyles.Top;
 
             //Button Exit
             btnExit = new Button();
@@ -48,6 +49,7 @@ namespace Click_Game.Panel_uri
             this.btnExit.Font = font;
             this.btnExit.Text = "Exit";
             this.btnExit.Click += new EventHandler(btnExit_Click);
+            this.btnExit.Anchor = AnchorStyles.Top;
 
             //Picture
             pctBox = new PictureBox();
@@ -57,14 +59,15 @@ namespace Click_Game.Panel_uri
             pctBox.Size = new System.Drawing.Size(125,125);
             pctBox.Image = Image.FromFile(Application.StartupPath + @"/images/click.png");
             pctBox.SizeMode = PictureBoxSizeMode.StretchImage;
+            this.pctBox.Anchor = AnchorStyles.Top;
 
         }
 
         private void btnStart_Click(object sender, EventArgs e)
         {
 
-
-
+            this.form.removepnl("pnlStart");
+            this.form.Controls.Add(new pnlGame(form));
 
         }
 
