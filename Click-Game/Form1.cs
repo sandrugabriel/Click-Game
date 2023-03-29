@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,8 +18,35 @@ namespace Click_Game
         {
             InitializeComponent();
 
+
             this.Controls.Add(new pnlStart(this));
 
         }
+
+        public void removepnl(string pnl)
+        {
+            Control control = null;
+
+            foreach (Control ctl in this.Controls)
+            {
+
+                if (ctl.Name == pnl)
+                {
+                    control = ctl;
+                }
+
+
+            }
+
+
+            this.Controls.Remove(control);
+
+        }
+
+        private void progressBar1_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
