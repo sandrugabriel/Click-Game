@@ -36,7 +36,8 @@ namespace Click_Game.Panel_uri
             pictures = new List<PictureBox>();
 
             random = new Random();
-
+            this.form.MaximumSize = new Size(825,571);
+            this.form.MinimumSize = new Size(825,571);
             this.Name = "pnlGame";
             this.form.Size = new System.Drawing.Size(825, 571);
             this.Location = new System.Drawing.Point(0, 0);
@@ -156,9 +157,13 @@ namespace Click_Game.Panel_uri
                     if (control1 is PictureBox pct1)
                         this.Controls.Remove(pct1);
                 }
-                MessageBox.Show("You lose! \n Score: " + score.ToString(), "Lose", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                this.form.MaximumSize = new Size(364, 400);
+                this.form.MinimumSize = new Size(364, 400);
                 this.form.removepnl("pnlGame");
                 this.form.Controls.Add(new pnlStart(form));
+                MessageBox.Show("You lose! \n Score: " + score.ToString(), "Lose", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                
 
 
             }

@@ -18,7 +18,8 @@ namespace Click_Game
         {
             InitializeComponent();
 
-
+            this.MaximumSize = new System.Drawing.Size(364, 400);
+            this.MinimumSize = new System.Drawing.Size(364, 400);
             this.Controls.Add(new pnlStart(this));
 
         }
